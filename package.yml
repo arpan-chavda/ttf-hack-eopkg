@@ -1,0 +1,16 @@
+name       : ttf-hack
+version    : 2.019
+release    : 10
+source     :
+    - https://github.com/chrissimpkins/Hack/releases/download/v2.019/Hack-v2_019-ttf.tar.gz : d70547779340bfb53cc683a8cb9641e7079fce7ace4bfdcd0683764b82d3356d
+license    : SIL Open Font License 1.1 and Bitstream Vera License
+summary    : A typeface designed for source code
+description: |
+    A hand groomed and optically balanced typeface based on Bitstream Vera Mono
+setup      : |
+builddeps  :
+        - fontconfig
+build      : |
+install    : |
+        mkdir -p %installroot%/usr/share/fonts/
+        mv *.ttf %installroot%/usr/share/fonts/

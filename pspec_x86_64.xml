@@ -1,0 +1,33 @@
+<PISI>
+    <Source>
+        <Name>ttf-hack</Name>
+        <Packager>
+            <Name>Arpan Chavda</Name>
+            <Email>arpanchavdaeng@gmail.com</Email>
+        </Packager>
+        <License>SIL Open Font License 1.1 and Bitstream Vera License</License>
+        <Summary xml:lang="en">A typeface designed for source code</Summary>
+        <Description xml:lang="en">A hand groomed and optically balanced typeface based on Bitstream Vera Mono
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>ttf-hack</Name>
+        <Summary xml:lang="en">A typeface designed for source code</Summary>
+        <Description xml:lang="en">A hand groomed and optically balanced typeface based on Bitstream Vera Mono
+</Description>
+        <PartOf>desktop.font</PartOf>
+        <Files>
+            <Path fileType="data">/usr/share/fonts</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="10">
+            <Date>2016-03-21</Date>
+            <Version>2.019</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Arpan Chavda</Name>
+            <Email>arpanchavdaeng@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
