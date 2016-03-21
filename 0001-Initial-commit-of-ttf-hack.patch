@@ -1,0 +1,97 @@
+From f2dd3909d33ef46a620e3e3156ca3a90e3430133 Mon Sep 17 00:00:00 2001
+From: Arpan Chavda <arpanchavdaeng@gmail.com>
+Date: Mon, 21 Mar 2016 21:44:38 +0530
+Subject: [PATCH] Initial commit of ttf-hack
+
+---
+ Makefile         |  1 +
+ component.xml    |  3 +++
+ package.yml      | 16 ++++++++++++++++
+ pspec_x86_64.xml | 33 +++++++++++++++++++++++++++++++++
+ 4 files changed, 53 insertions(+)
+ create mode 100644 Makefile
+ create mode 100644 component.xml
+ create mode 100644 package.yml
+ create mode 100644 pspec_x86_64.xml
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..0a42375
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1 @@
++include ../Makefile.common
+diff --git a/component.xml b/component.xml
+new file mode 100644
+index 0000000..709d503
+--- /dev/null
++++ b/component.xml
+@@ -0,0 +1,3 @@
++<PISI>
++    <Name>desktop.font</Name>
++</PISI>
+diff --git a/package.yml b/package.yml
+new file mode 100644
+index 0000000..91e9726
+--- /dev/null
++++ b/package.yml
+@@ -0,0 +1,16 @@
++name       : ttf-hack
++version    : 2.019
++release    : 10
++source     :
++    - https://github.com/chrissimpkins/Hack/releases/download/v2.019/Hack-v2_019-ttf.tar.gz : d70547779340bfb53cc683a8cb9641e7079fce7ace4bfdcd0683764b82d3356d
++license    : SIL Open Font License 1.1 and Bitstream Vera License
++summary    : A typeface designed for source code
++description: |
++    A hand groomed and optically balanced typeface based on Bitstream Vera Mono
++setup      : |
++builddeps  :
++        - fontconfig
++build      : |
++install    : |
++        mkdir -p %installroot%/usr/share/fonts/
++        mv *.ttf %installroot%/usr/share/fonts/
+diff --git a/pspec_x86_64.xml b/pspec_x86_64.xml
+new file mode 100644
+index 0000000..6dbb30e
+--- /dev/null
++++ b/pspec_x86_64.xml
+@@ -0,0 +1,33 @@
++<PISI>
++    <Source>
++        <Name>ttf-hack</Name>
++        <Packager>
++            <Name>Arpan Chavda</Name>
++            <Email>arpanchavdaeng@gmail.com</Email>
++        </Packager>
++        <License>SIL Open Font License 1.1 and Bitstream Vera License</License>
++        <Summary xml:lang="en">A typeface designed for source code</Summary>
++        <Description xml:lang="en">A hand groomed and optically balanced typeface based on Bitstream Vera Mono
++</Description>
++        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
++    </Source>
++    <Package>
++        <Name>ttf-hack</Name>
++        <Summary xml:lang="en">A typeface designed for source code</Summary>
++        <Description xml:lang="en">A hand groomed and optically balanced typeface based on Bitstream Vera Mono
++</Description>
++        <PartOf>desktop.font</PartOf>
++        <Files>
++            <Path fileType="data">/usr/share/fonts</Path>
++        </Files>
++    </Package>
++    <History>
++        <Update release="10">
++            <Date>2016-03-21</Date>
++            <Version>2.019</Version>
++            <Comment>Packaging update</Comment>
++            <Name>Arpan Chavda</Name>
++            <Email>arpanchavdaeng@gmail.com</Email>
++        </Update>
++    </History>
++</PISI>
+\ No newline at end of file
+-- 
+2.7.3
+
